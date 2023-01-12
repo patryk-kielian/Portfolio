@@ -1,0 +1,168 @@
+:root {
+  --black: #000814;
+  --white: #ffffff;
+  --accent_one: #2128bd;
+  --accent_two: #005ffe;
+  --accent_three: #ffe5e3;
+  --accent_four: #ffcc57;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Montserrat Alternates, sans-serif;
+  font-weight: 800;
+  color: var(--black);
+}
+
+h3 {
+  font-family: Montserrat, sans-serif;
+}
+
+h1,
+h2:hover {
+  cursor: default;
+}
+
+/* REPEATING CLASSES */
+
+.background {
+  background-color: var(--white);
+}
+
+.colored {
+  mix-blend-mode: lighten;
+  background-color: var(--white);
+}
+
+/* GENERAL CLASSES */
+
+.shapes {
+  position: fixed;
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--black);
+  overflow: hidden;
+  z-index: -1;
+}
+
+.shape {
+  will-change: transform;
+  position: absolute;
+  border-radius: 50%;
+}
+.shape.shape-1 {
+  background: var(--accent_two);
+  width: 650px;
+  height: 650px;
+  margin: -325px 0 0 -325px;
+}
+.shape.shape-2 {
+  background: var(--accent_three);
+  width: 440px;
+  height: 440px;
+  margin: -220px 0 0 -220px;
+}
+.shape.shape-3 {
+  background: var(--accent_four);
+  width: 270px;
+  height: 270px;
+  margin: -135px 0 0 -135px;
+}
+
+.navbar {
+  background-color: var(--white);
+  z-index: 1;
+  position: fixed;
+  min-width: 34%;
+  height: 100vh;
+}
+
+.container {
+  background-colo: var(--white);
+  max-width: 66%;
+  margin-right: 0px;
+  float: right;
+}
+
+.name {
+  font-weight: 800;
+  font-size: 128px;
+  line-height: 156px;
+}
+
+.landing_subtext {
+}
+
+.title {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 78px;
+}
+
+.content {
+  top: 0;
+  left: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  width: 100vw;
+  background: var(--white);
+  mix-blend-mode: screen;
+}
+
+@media (min-width: 419px) {
+  h1 {
+    font-size: 100px;
+    font-size: calc((0.0989119683 * 100vw + (58.5558852621px)));
+  }
+}
+@media (min-width: 1430px) {
+  h1 {
+    font-size: 200px;
+  }
+}
+
+.cursor {
+  position: fixed;
+  background: var(--accent_one);
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  will-change: transform;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+::-moz-selection {
+  color: var(--white);
+  background: var(--accent_one);
+}
+
+::selection {
+  color: var(--white);
+  background: var(--accent_one);
+}
