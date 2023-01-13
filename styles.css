@@ -21,6 +21,21 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  background: radial-gradient(
+    50% 100% at 70% 70%,
+    var(--accent_four) 33%,
+    var(--accent_three) 33%,
+    var(--accent_three) 66%,
+    var(--accent_two) 66%,
+    var(--accent_two) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+}
+
 h1,
 h2,
 h3,
@@ -53,6 +68,7 @@ h2:hover {
 
 /* GENERAL CLASSES */
 
+/* HOVER EFFECTS */
 .shapes {
   position: fixed;
   min-height: 100vh;
@@ -86,6 +102,8 @@ h2:hover {
   margin: -135px 0 0 -135px;
 }
 
+/* NAVBAR */
+
 .navbar {
   background-color: var(--white);
   z-index: 1;
@@ -94,39 +112,100 @@ h2:hover {
   height: 100vh;
 }
 
+.navbar_contents {
+  width: 315px;
+  margin: 70px 0px 70px 100px;
+  /* padding-left: 100px; */
+  height: 90%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  /* align-items: stretch; */
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.button_group_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.languages_group_nav {
+  margin-bottom: 28px;
+}
+
+.name_nav {
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+  color: var(--black);
+}
+
+.link_nav {
+  font-family: Montserrat, sans-serif;
+  font-weight: 800;
+  color: var(--black);
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 28px;
+}
+
+.link_nav.radio {
+  margin-right: 10px;
+}
+
+a.unselected {
+  font-weight: 500;
+}
+
+/* BODY */
+
 .container {
-  background-colo: var(--white);
   max-width: 66%;
   margin-right: 0px;
   float: right;
 }
 
-.name {
-  font-weight: 800;
-  font-size: 128px;
-  line-height: 156px;
+.landing {
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
 }
 
-.landing_subtext {
+.name_landing {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+  padding-top: 30px;
+}
+
+.name {
+  font-weight: 800;
+  font-size: 156px;
+  line-height: 180px;
+  margin-top: auto;
+}
+
+.subtext_landing {
+  height: 100%;
+}
+
+.subtext {
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 40px;
 }
 
 .title {
   font-weight: 800;
   font-size: 64px;
   line-height: 78px;
-}
-
-.content {
-  top: 0;
-  left: 0;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* height: 100vh; */
-  width: 100vw;
-  background: var(--white);
-  mix-blend-mode: screen;
 }
 
 @media (min-width: 419px) {
