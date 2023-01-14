@@ -55,6 +55,14 @@ h2:hover {
   cursor: default;
 }
 
+p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
 /* REPEATING CLASSES */
 
 .background {
@@ -64,6 +72,12 @@ h2:hover {
 .colored {
   mix-blend-mode: lighten;
   background-color: var(--white);
+}
+
+.title {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 78px;
 }
 
 /* GENERAL CLASSES */
@@ -108,15 +122,16 @@ h2:hover {
   background-color: var(--white);
   z-index: 1;
   position: fixed;
-  min-width: 34%;
+  width: 34%;
   height: 100vh;
 }
 
 .navbar_contents {
-  width: 315px;
+  /* max-width: 315px; */
+  width: min(30vw, 315px);
   margin: 70px 0px 70px 100px;
   /* padding-left: 100px; */
-  height: 90%;
+  height: 90vh;
   float: right;
   display: flex;
   flex-direction: column;
@@ -129,6 +144,7 @@ h2:hover {
   display: flex;
   flex-direction: column;
   align-items: left;
+  margin-bottom: 20px;
 }
 
 .languages_group_nav {
@@ -142,6 +158,7 @@ h2:hover {
   font-size: 32px;
   line-height: 39px;
   color: var(--black);
+  margin-bottom: 40px;
 }
 
 .link_nav {
@@ -164,7 +181,7 @@ a.unselected {
 /* BODY */
 
 .container {
-  max-width: 66%;
+  width: 66%;
   margin-right: 0px;
   float: right;
 }
@@ -185,8 +202,8 @@ a.unselected {
 
 .name {
   font-weight: 800;
-  font-size: 156px;
-  line-height: 180px;
+  font-size: min(156px, 16vw);
+  line-height: 115%;
   margin-top: auto;
 }
 
@@ -202,10 +219,59 @@ a.unselected {
   line-height: 40px;
 }
 
-.title {
+/* ABOUT ME */
+
+.about_title {
+  padding-top: 70px;
+}
+
+.about_container {
+  padding-top: 90px;
+}
+
+.about_paragraph {
+  text-align: justify;
+  max-width: min(62vw, 925px);
+}
+
+.about_cv_container {
+  padding-top: 50px;
+}
+
+.about_cv {
+  font-family: "Montserrat";
+  font-style: normal;
   font-weight: 800;
-  font-size: 64px;
-  line-height: 78px;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--black);
+  display: inline-block;
+}
+
+.skills_title {
+  padding-top: 120px;
+}
+
+.skills {
+  padding-top: 55px;
+}
+
+.skill_subtitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.tool_icon {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  -webkit-mask-image: url(/img/icon_download.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 50% 50%;
+  mask-image: url(/img/logo_html.svg);
 }
 
 @media (min-width: 419px) {
