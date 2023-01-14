@@ -272,6 +272,8 @@ a.unselected {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: 50% 50%;
   mask-image: url(/img/logo_html.svg);
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
 }
 
 @media (min-width: 419px) {
