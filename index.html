@@ -92,58 +92,60 @@
             <h3 class="skill_subtitle">Narzędzia</h3>
             <div class="tools_flex wide">
               <div class="tool">
-                <div class="tool_img" id="html_img"></div>
+                <div class="tool_img html_img"></div>
                 <p class="tool_name">HTML</p>
               </div>
               <div class="tool">
-                <div class="tool_img" id="css_img"></div>
+                <div class="tool_img css_img"></div>
                 <p class="tool_name">CSS</p>
               </div>
               <div class="tool">
-                <div class="tool_img" id="js_img"></div>
+                <div class="tool_img js_img"></div>
                 <p class="tool_name">JavaScript</p>
               </div>
               <div class="tool">
-                <div class="tool_img" id="python_img"></div>
+                <div class="tool_img python_img"></div>
                 <p class="tool_name">Python</p>
               </div>
               <div class="tool">
-                <div class="tool_img" id="github_img"></div>
+                <div class="tool_img github_img"></div>
                 <p class="tool_name">Github</p>
               </div>
               <div class="tool">
-                <div class="tool_img" id="webflow_img"></div>
+                <div class="tool_img webflow_img"></div>
                 <p class="tool_name">Webflow</p>
               </div>
               <div class="tool">
-                <div class="tool_img" id="figma_img"></div>
+                <div class="tool_img figma_img"></div>
                 <p class="tool_name">Figma</p>
               </div>
               <div class="tool">
-                <div class="tool_img" id="ps_img"></div>
+                <div class="tool_img ps_img"></div>
                 <p class="tool_name">Photoshop</p>
               </div>
               <div class="tool">
-                <div class="tool_img" id="ps_img"></div>
+                <div class="tool_img ps_img"></div>
                 <p class="tool_name">Photoshop</p>
               </div>
               <div class="tool">
-                <div class="tool_img" id="ps_img"></div>
+                <div class="tool_img ps_img"></div>
                 <p class="tool_name">Photoshop</p>
               </div>
             </div>
             <h3 class="skill_subtitle">Języki</h3>
             <div class="languages_flex wide">
               <p class="language">
-                angielski <br />
+                <b>angielski</b>
+                <br />
                 C1
               </p>
               <p class="language">
-                niemiecki <br />
+                <b>niemiecki</b>
+                <br />
                 B1
               </p>
               <p class="language">
-                polski <br />
+                <b>polski</b> <br />
                 rodzimy
               </p>
             </div>
@@ -156,8 +158,9 @@
           <div class="portfolio_work" id="item-1">
             <a class="portfolio_work_name">Lista zadań do zrobienia</a>
             <div class="portfolio_thumbnail"></div>
-
-            <p class="portfolio_work_description">Python, csv</p>
+            <div class="portfolio_work_description">
+              <p class="portfolio_work_tools">Python, csv</p>
+            </div>
           </div>
           <div class="portfolio_work">
             <img src="" alt="" class="thumbnail" />
@@ -172,38 +175,44 @@
         </div>
         <div class="see_more background">
           <h3 class="see_more_subtitle">Zobacz więcej</h3>
-          <div class="see_more_flex">
-            <div class="see_profile">
-              <a href="">
-                <img src="" alt="" class="profile_img" />
-                <p class="profile_link">profil figma</p>
+          <div class="see_more_flex wide">
+            <div class="see_profile see_profile_narrow">
+              <a href="" class="profile_link">
+                <div class="profile_img figma_img"></div>
+                <p class="profile_paragraph">profil figma</p>
               </a>
             </div>
-            <div class="see_profile">
-              <a href="">
-                <img src="" alt="" class="profile_img" />
-                <p class="profile_link">profil github</p>
+            <div class="see_profile see_profile_narrow">
+              <a href="" class="profile_link">
+                <div class="profile_img github_img"></div>
+                <p class="profile_paragraph">profil github</p>
               </a>
             </div>
-            <div class="see_profile">
-              <a href="">
-                <img src="" alt="" class="profile_img" />
-                <p class="profile_link">portfolio architektoniczne</p>
+            <div class="see_profile see_profile_wide">
+              <a href="" class="profile_link">
+                <div class="profile_img issuu_img"></div>
+                <p class="profile_paragraph">portfolio architektoniczne</p>
               </a>
             </div>
           </div>
         </div>
       </section>
       <section>
-        <h2 class="title colored">Kontakt</h2>
+        <h2 class="contact_title title colored">Kontakt</h2>
         <div class="contact background">
-          <p>
+          <p class="contact_paragraph wide">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             elementum et quam quis vehicula.
           </p>
-          <div>
-            <a href="" class="contact_link mail">patryk.kielian0@gmail.com</a>
-            <a href="" class="contact_link">linkedin</a>
+          <div class="contact_flex wide">
+            <div class="contact_item mail">
+              <a href="mailto: patryk.kielian0@gmail.com" class="contact_link"
+                >patryk.kielian0@gmail.com</a
+              >
+            </div>
+            <div class="contact_item">
+              <a href="" class="contact_link">linkedin</a>
+            </div>
           </div>
         </div>
       </section>
