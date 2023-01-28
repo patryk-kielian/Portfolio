@@ -23,23 +23,32 @@ body {
 }
 
 a {
-  text-decoration: none;
-  -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  text-decoration: none;
+  color: var(--black);
+  position: relative;
+  /* overflow: hidden; */
+
+  background-size: 100%;
 }
 
 a:hover {
   background: radial-gradient(
-    50% 100% at 70% 70%,
+    40% 100% at 40% 60%,
     var(--accent_four) 33%,
     var(--accent_three) 33%,
     var(--accent_three) 66%,
     var(--accent_two) 66%,
     var(--accent_two) 100%
   );
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  background-size: 120%;
+
   /* text-fill-color: transparent; */
 }
 
@@ -463,20 +472,6 @@ a.unselected {
   font-weight: 800;
   font-size: 1.5rem;
   line-height: 1.75rem;
-}
-
-.see_profile:hover {
-  background: radial-gradient(
-    50% 100% at 70% 70%,
-    var(--accent_four) 33%,
-    var(--accent_three) 33%,
-    var(--accent_three) 66%,
-    var(--accent_two) 66%,
-    var(--accent_two) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .contact_title {
