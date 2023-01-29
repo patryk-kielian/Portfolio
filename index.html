@@ -28,11 +28,11 @@
     <!-- <div class="cursor"></div> -->
     <div class="navbar">
       <div class="navbar_contents">
-        <a href="" class="name_nav">Patryk<br />Kielian</a>
+        <a href="#landing" class="name_nav">Patryk<br />Kielian</a>
         <div class="button_group_nav">
-          <a href="" class="link_nav">o mnie</a>
-          <a href="" class="link_nav">portfolio</a>
-          <a href="" class="link_nav">kontakt</a>
+          <a href="#about" class="link_nav">o mnie</a>
+          <a href="#portfolio" class="link_nav">portfolio</a>
+          <a href="#contact" class="link_nav">kontakt</a>
         </div>
         <div class="button_group_nav">
           <a href="" class="link_nav">pobierz cv</a>
@@ -56,7 +56,7 @@
       <div class="shape shape-3"></div>
     </div>
     <div class="container">
-      <section class="landing">
+      <section class="landing" id="landing">
         <div class="name_landing colored">
           <h1 class="name">Patryk<br />Kielian</h1>
         </div>
@@ -65,12 +65,13 @@
           <!-- <p>|</p>
           <p>web designer</p> -->
         </div>
+        <a href="#about" class="scroll_down"><span></span></a>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div>
           <h2 class="about_title title colored">O mnie</h2>
           <div class="about_container background">
-            <p class="about_paragraph">
+            <p class="about_paragraph wide">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               elementum et quam quis vehicula. Cras enim libero, egestas in eros
               sed, laoreet luctus enim. Curabitur consectetur interdum tellus
@@ -90,105 +91,138 @@
           <h2 class="skills_title title colored">Umiejętności</h2>
           <div class="skills background">
             <h3 class="skill_subtitle">Narzędzia</h3>
-            <div class="tools">
+            <div class="tools_flex wide">
               <div class="tool">
-                <img src="" alt="" class="tool_img" />
-                <div class="tool_icon"></div>
+                <div class="tool_img html_img"></div>
                 <p class="tool_name">HTML</p>
               </div>
               <div class="tool">
-                <img src="" alt="" class="tool_img" />
+                <div class="tool_img css_img"></div>
                 <p class="tool_name">CSS</p>
               </div>
               <div class="tool">
-                <img src="" alt="" class="tool_img" />
+                <div class="tool_img js_img"></div>
                 <p class="tool_name">JavaScript</p>
               </div>
               <div class="tool">
-                <img src="" alt="" class="tool_img" />
+                <div class="tool_img python_img"></div>
                 <p class="tool_name">Python</p>
               </div>
               <div class="tool">
-                <img src="" alt="" class="tool_img" />
+                <div class="tool_img github_img"></div>
                 <p class="tool_name">Github</p>
               </div>
               <div class="tool">
-                <img src="" alt="" class="tool_img" />
+                <div class="tool_img webflow_img"></div>
                 <p class="tool_name">Webflow</p>
               </div>
               <div class="tool">
-                <img src="" alt="" class="tool_img" />
+                <div class="tool_img figma_img"></div>
                 <p class="tool_name">Figma</p>
               </div>
               <div class="tool">
-                <img src="" alt="" class="tool_img" />
-                <p class="tool_name">Adobe Photoshop</p>
+                <div class="tool_img ps_img"></div>
+                <p class="tool_name">Photoshop</p>
+              </div>
+              <div class="tool">
+                <div class="tool_img ps_img"></div>
+                <p class="tool_name">Photoshop</p>
+              </div>
+              <div class="tool">
+                <div class="tool_img ps_img"></div>
+                <p class="tool_name">Photoshop</p>
               </div>
             </div>
             <h3 class="skill_subtitle">Języki</h3>
-            <div class="languages">
-              <p>angielski C1</p>
-              <p>niemiecki B1</p>
+            <div class="languages_flex wide">
+              <p class="language">
+                <b>angielski</b>
+                <br />
+                C1
+              </p>
+              <p class="language">
+                <b>niemiecki</b>
+                <br />
+                B1
+              </p>
+              <p class="language">
+                <b>polski</b> <br />
+                rodzimy
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <section>
-        <h2 class="title colored">Portfolio</h2>
-        <div class="works background">
-          <div class="work">
-            <img src="" alt="" class="thumbnail" />
-            <h3 class="work_name">Lista zadań do zrobienia</h3>
-            <p class="work_description">Python, csv</p>
+      <section id="portfolio">
+        <h2 class="portfolio_title title colored">Portfolio</h2>
+        <div class="portfolio_works background">
+          <div class="portfolio_work">
+            <a href="" id="item-1">
+              <div class="portfolio_work_name">Lista zadań do zrobienia</div>
+              <div class="portfolio_thumbnail"></div>
+              <div class="portfolio_work_description">
+                <p class="portfolio_work_tools">Python, csv</p>
+              </div>
+            </a>
           </div>
-          <div class="work">
+          <div class="portfolio_work">
             <img src="" alt="" class="thumbnail" />
-            <h3 class="work_name">Lista zadań do zrobienia</h3>
-            <p class="work_description">Python, csv</p>
+            <a class="portfolio_work_name">Lista zadań do zrobienia</a>
+            <p class="portfolio_work_description">Python, csv</p>
           </div>
-          <div class="work">
+          <div class="portfolio_work">
             <img src="" alt="" class="thumbnail" />
-            <h3 class="work_name">Lista zadań do zrobienia</h3>
-            <p class="work_description">Python, csv</p>
+            <a class="portfolio_work_name">Lista zadań do zrobienia</a>
+            <p class="portfolio_work_description">Python, csv</p>
           </div>
         </div>
         <div class="see_more background">
-          <div class="see_profile">
-            <a href="">
-              <img src="" alt="" class="profile_img" />
-              <p class="profile_link">profil figma</p>
-            </a>
-          </div>
-          <div class="see_profile">
-            <a href="">
-              <img src="" alt="" class="profile_img" />
-              <p class="profile_link">profil github</p>
-            </a>
-          </div>
-          <div class="see_profile">
-            <a href="">
-              <img src="" alt="" class="profile_img" />
-              <p class="profile_link">portfolio architektoniczne</p>
-            </a>
+          <h3 class="see_more_subtitle">Zobacz więcej:</h3>
+          <div class="see_more_flex wide">
+            <div class="see_profile see_profile_narrow">
+              <a href="" class="profile_link profile_paragraph">
+                <div class="profile_img figma_img"></div>
+                profil figma
+              </a>
+            </div>
+            <div class="see_profile see_profile_narrow">
+              <a href="" class="profile_link profile_paragraph">
+                <div class="profile_img github_img"></div>
+                profil github
+              </a>
+            </div>
+            <div class="see_profile see_profile_wide">
+              <a href="" class="profile_link profile_paragraph">
+                <div class="profile_img issuu_img"></div>
+                portfolio architektoniczne
+              </a>
+            </div>
           </div>
         </div>
       </section>
-      <section>
-        <h2 class="title colored">Kontakt</h2>
+      <section id="contact">
+        <h2 class="contact_title title colored">Kontakt</h2>
         <div class="contact background">
-          <p>
+          <p class="contact_paragraph wide">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             elementum et quam quis vehicula.
           </p>
-          <div>
-            <a href="" class="contact_link mail">patryk.kielian0@gmail.com</a>
-            <a href="" class="contact_link">linkedin</a>
+          <div class="contact_flex wide">
+            <div class="contact_item mail">
+              <a href="mailto: patryk.kielian0@gmail.com" class="contact_link"
+                >patryk.kielian0@gmail.com</a
+              >
+            </div>
+            <div class="contact_item">
+              <a href="" class="contact_link">linkedin</a>
+            </div>
           </div>
         </div>
+        <p class="copyright background">
+          Patryk Kielian © <span id="copyright-year">2023 </span> wszelkie prawa
+          zastrzeżone
+        </p>
       </section>
-      <!-- <div class="content">
-        <h1>Hello there!</h1>
-      </div> -->
     </div>
 
     <script
