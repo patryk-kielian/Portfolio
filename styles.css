@@ -152,7 +152,7 @@ p {
 .navbar_contents {
   /* max-width: 315px; */
   width: min(30vw, 315px);
-  margin: 70px 0px 70px 100px;
+  margin: 7vh 0px 70px 3vh;
   /* padding-left: 100px; */
   height: 90vh;
   float: right;
@@ -314,45 +314,46 @@ a.unselected {
 }
 
 .html_img {
-  -webkit-mask-image: url(/img/logo_html.svg);
-  mask-image: url(/img/logo_html.svg);
+  -webkit-mask-image: url(./img/logo_html.svg);
+  mask-image: url(./img/logo_html.svg);
 }
 .css_img {
-  -webkit-mask-image: url(/img/logo_css.svg);
-  mask-image: url(/img/logo_css.svg);
+  -webkit-mask-image: url(./img/logo_css.svg);
+  mask-image: url(./img/logo_css.svg);
 }
 .js_img {
-  -webkit-mask-image: url(/img/logo_js.svg);
-  mask-image: url(/img/logo_js.svg);
+  -webkit-mask-image: url(./img/logo_js.svg);
+  mask-image: url(./img/logo_js.svg);
 }
 .python_img {
-  -webkit-mask-image: url(/img/logo_python.svg);
-  mask-image: url(/img/logo_python.svg);
+  -webkit-mask-image: url(./img/logo_python.svg);
+  mask-image: url(./img/logo_python.svg);
 }
 .github_img {
-  -webkit-mask-image: url(/img/logo_github.svg);
-  mask-image: url(/img/logo_github.svg);
+  -webkit-mask-image: url(./img/logo_github.svg);
+  mask-image: url(./img/logo_github.svg);
 }
 .webflow_img {
-  -webkit-mask-image: url(/img/logo_webflow.svg);
-  mask-image: url(/img/logo_webflow.svg);
+  -webkit-mask-image: url(./img/logo_webflow.svg);
+  mask-image: url(./img/logo_webflow.svg);
 }
 .figma_img {
-  -webkit-mask-image: url(/img/logo_figma.svg);
-  mask-image: url(/img/logo_figma.svg);
+  -webkit-mask-image: url(./img/logo_figma.svg);
+  mask-image: url(./img/logo_figma.svg);
 }
 .ps_img {
-  -webkit-mask-image: url(/img/logo_ps.svg);
-  mask-image: url(/img/logo_ps.svg);
+  -webkit-mask-image: url(./img/logo_ps.svg);
+  mask-image: url(./img/logo_ps.svg);
 }
 .issuu_img {
-  -webkit-mask-image: url(/img/logo_issuu.svg);
-  mask-image: url(/img/logo_issuu.svg);
+  -webkit-mask-image: url(./img/logo_issuu.svg);
+  mask-image: url(./img/logo_issuu.svg);
 }
 
 .languages_flex {
   display: flex;
   margin-top: 60px;
+  padding-bottom: 90px;
 }
 
 .language {
@@ -362,7 +363,7 @@ a.unselected {
 }
 
 .portfolio_title {
-  padding: 160px 0 90px;
+  padding: 70px 0 90px;
 }
 
 .portfolio_work {
@@ -384,7 +385,7 @@ a.unselected {
       rgba(223, 223, 223, 0.306) 56.3%,
       rgba(255, 255, 255, 0.6) 80.07%
     ),
-    url(/item1/thumbnail.jpg);
+    url(./item1/thumbnail.jpg);
 }
 
 .portfolio_thumbnail:hover {
@@ -438,6 +439,7 @@ a.unselected {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-bottom: 90px;
 }
 
 .see_profile {
@@ -474,8 +476,18 @@ a.unselected {
   line-height: 1.75rem;
 }
 
+section#contact {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .contact_title {
-  padding: 160px 0 90px;
+  padding: 70px 0 90px;
+}
+
+.contact {
+  flex-grow: 1;
 }
 
 .contact_paragraph {
@@ -505,6 +517,11 @@ a.unselected {
 
 .contact_item.mail {
   width: 66%;
+}
+
+.copyright {
+  padding-bottom: 3vh;
+  font-size: 1.25rem;
 }
 
 @media screen and (max-width: 1200px) {
@@ -543,6 +560,75 @@ a.unselected {
   color: var(--white);
   background: var(--accent_one);
 }
+
+/* LANDING SCROLL ANIMATION */
+
+.scroll_down {
+  padding-top: 60px;
+  position: absolute;
+  top: 85vh;
+  left: 50vw;
+  z-index: 100;
+}
+.scroll_down span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border: 2px solid var(--black);
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+.scroll_down span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--black);
+  border-radius: 100%;
+  -webkit-animation: sdb10 2s infinite;
+  animation: sdb10 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb10 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* SCROLLBAR */
 
 ::-webkit-scrollbar {
   width: 10px;

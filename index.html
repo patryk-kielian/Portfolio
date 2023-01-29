@@ -28,11 +28,11 @@
     <!-- <div class="cursor"></div> -->
     <div class="navbar">
       <div class="navbar_contents">
-        <a href="" class="name_nav">Patryk<br />Kielian</a>
+        <a href="#landing" class="name_nav">Patryk<br />Kielian</a>
         <div class="button_group_nav">
-          <a href="" class="link_nav">o mnie</a>
-          <a href="" class="link_nav">portfolio</a>
-          <a href="" class="link_nav">kontakt</a>
+          <a href="#about" class="link_nav">o mnie</a>
+          <a href="#portfolio" class="link_nav">portfolio</a>
+          <a href="#contact" class="link_nav">kontakt</a>
         </div>
         <div class="button_group_nav">
           <a href="" class="link_nav">pobierz cv</a>
@@ -56,7 +56,7 @@
       <div class="shape shape-3"></div>
     </div>
     <div class="container">
-      <section class="landing">
+      <section class="landing" id="landing">
         <div class="name_landing colored">
           <h1 class="name">Patryk<br />Kielian</h1>
         </div>
@@ -65,8 +65,9 @@
           <!-- <p>|</p>
           <p>web designer</p> -->
         </div>
+        <a href="#about" class="scroll_down"><span></span></a>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div>
           <h2 class="about_title title colored">O mnie</h2>
           <div class="about_container background">
@@ -152,15 +153,17 @@
           </div>
         </div>
       </section>
-      <section>
+      <section id="portfolio">
         <h2 class="portfolio_title title colored">Portfolio</h2>
         <div class="portfolio_works background">
-          <div class="portfolio_work" id="item-1">
-            <a class="portfolio_work_name">Lista zadań do zrobienia</a>
-            <div class="portfolio_thumbnail"></div>
-            <div class="portfolio_work_description">
-              <p class="portfolio_work_tools">Python, csv</p>
-            </div>
+          <div class="portfolio_work">
+            <a href="" id="item-1">
+              <div class="portfolio_work_name">Lista zadań do zrobienia</div>
+              <div class="portfolio_thumbnail"></div>
+              <div class="portfolio_work_description">
+                <p class="portfolio_work_tools">Python, csv</p>
+              </div>
+            </a>
           </div>
           <div class="portfolio_work">
             <img src="" alt="" class="thumbnail" />
@@ -174,7 +177,7 @@
           </div>
         </div>
         <div class="see_more background">
-          <h3 class="see_more_subtitle">Zobacz więcej</h3>
+          <h3 class="see_more_subtitle">Zobacz więcej:</h3>
           <div class="see_more_flex wide">
             <div class="see_profile see_profile_narrow">
               <a href="" class="profile_link profile_paragraph">
@@ -197,7 +200,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section id="contact">
         <h2 class="contact_title title colored">Kontakt</h2>
         <div class="contact background">
           <p class="contact_paragraph wide">
@@ -215,10 +218,11 @@
             </div>
           </div>
         </div>
+        <p class="copyright background">
+          Patryk Kielian © <span id="copyright-year">2023 </span> wszelkie prawa
+          zastrzeżone
+        </p>
       </section>
-      <!-- <div class="content">
-        <h1>Hello there!</h1>
-      </div> -->
     </div>
 
     <script
