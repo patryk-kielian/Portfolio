@@ -1,17 +1,27 @@
+function myInitCode() {}
 // cursor
 document.body.addEventListener("mousemove", (evt) => {
   const mouseX = evt.clientX;
   const mouseY = evt.clientY;
 
-  gsap.set(".cursor", {
-    x: mouseX,
-    y: mouseY,
-  });
+  // gsap.set(".cursor", {
+  //   x: mouseX,
+  //   y: mouseY,
+  // });
 
   gsap.to(".shape", {
     x: mouseX,
     y: mouseY,
     stagger: -0.1,
+  });
+});
+
+// hamburger icon
+window.addEventListener("load", function () {
+  console.log("The load event has fired!");
+  var hamburger = document.querySelector("#hamburger");
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("open");
   });
 });
 
