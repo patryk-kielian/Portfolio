@@ -28,24 +28,36 @@
     <!-- <div class="cursor"></div> -->
     <div class="navbar">
       <div class="navbar_contents">
-        <a href="#landing" class="name_nav">Patryk<br />Kielian</a>
-        <div class="button_group_nav">
-          <a href="#about" class="link_nav">o mnie</a>
-          <a href="#portfolio" class="link_nav">portfolio</a>
-          <a href="#contact" class="link_nav">kontakt</a>
-        </div>
-        <div class="button_group_nav">
-          <a href="" class="link_nav">pobierz cv</a>
-          <a href="" class="link_nav">linkedin</a>
-        </div>
-        <div class="controls">
-          <div class="languages_group_nav">
-            <a href="" class="link_nav radio">PL</a>
-            <a href="" class="link_nav radio unselected">EN</a>
+        <div class="navbar_top">
+          <a href="#landing" class="name_nav">Patryk Kielian</a>
+          <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <div class="color_mode_group_nav">
-            <a href="" class="link_nav radio">light</a>
-            <a href="" class="link_nav radio unselected">night</a>
+        </div>
+        <div class="navbar_open hidden">
+          <div class="button_group_nav shortcuts">
+            <a href="#about" class="link_nav">o mnie</a>
+            <a href="#portfolio" class="link_nav">portfolio</a>
+            <a href="#contact" class="link_nav">kontakt</a>
+          </div>
+          <div class="button_group_nav">
+            <a href="mailto: patryk.kielian0@gmail.com" class="link_nav mail"
+              >e-mail</a
+            >
+            <a href="" class="link_nav">pobierz cv</a>
+            <a href="" class="link_nav">linkedin</a>
+          </div>
+          <div class="controls">
+            <div class="languages_group_nav">
+              <a href="" class="link_nav radio">PL</a>
+              <a href="" class="link_nav radio">EN</a>
+            </div>
+            <div class="color_mode_group_nav">
+              <a href="" class="link_nav radio" id="light">light</a>
+              <a href="" class="link_nav radio" id="night">night</a>
+            </div>
           </div>
         </div>
       </div>
@@ -82,7 +94,20 @@
             <div class="about_cv_container">
               <a href="" class="about_cv">
                 <p class="about_cv">curriculum vitae</p>
-                <img src="img\icon_download.svg" alt="" />
+                <svg
+                  width="17"
+                  height="20"
+                  viewBox="0 0 17 20"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.7647 7.05884H13.6353C14.6824 7.05884 15.2 8.32943 14.4588 9.0706L9.05881 14.4706C8.59999 14.9294 7.85881 14.9294 7.39999 14.4706L1.99998 9.0706C1.2588 8.32943 1.78821 7.05884 2.83527 7.05884H4.70586V1.17647C4.70586 0.529413 5.23528 0 5.88234 0H10.5882C11.2353 0 11.7647 0.529413 11.7647 1.17647V7.05884ZM1.17647 20.0001C0.529413 20.0001 0 19.4707 0 18.8236C0 18.1766 0.529413 17.6472 1.17647 17.6472H15.2941C15.9412 17.6472 16.4706 18.1766 16.4706 18.8236C16.4706 19.4707 15.9412 20.0001 15.2941 20.0001H1.17647Z"
+                    fill="currentColor"
+                  />
+                </svg>
               </a>
             </div>
           </div>
@@ -156,7 +181,7 @@
       <section id="portfolio">
         <h2 class="portfolio_title title colored">Portfolio</h2>
         <div class="portfolio_works background">
-          <div class="portfolio_work">
+          <!-- <div class="portfolio_work">
             <a href="" id="item-1">
               <div class="portfolio_work_name">Lista zadań do zrobienia</div>
               <div class="portfolio_thumbnail"></div>
@@ -164,16 +189,78 @@
                 <p class="portfolio_work_tools">Python, csv</p>
               </div>
             </a>
+          </div> -->
+          <div class="portfolio_work">
+            <a href="" id="item-1">
+              <video
+                src="item1\file_example_WEBM_480_900KB.webm"
+                class="portfolio_thumbnail"
+                autoplay="true"
+                loop="true"
+              ></video>
+              <span> Lista zadań do zrobienia</span>
+            </a>
+            <div class="portfolio_work_description">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                elementum et quam quis vehicula.
+              </p>
+              <p><span>Python</span> <span>csv</span></p>
+            </div>
           </div>
           <div class="portfolio_work">
-            <img src="" alt="" class="thumbnail" />
-            <a class="portfolio_work_name">Lista zadań do zrobienia</a>
-            <p class="portfolio_work_description">Python, csv</p>
+            <a href="" id="item-1">
+              <video
+                src="item1\file_example_WEBM_480_900KB.webm"
+                class="portfolio_thumbnail"
+                autoplay="true"
+                loop="true"
+              ></video>
+              <span> Lista zadań do zrobienia</span>
+            </a>
+            <div class="portfolio_work_description">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                elementum et quam quis vehicula.
+              </p>
+              <p><span>Python</span> <span>csv</span></p>
+            </div>
           </div>
           <div class="portfolio_work">
-            <img src="" alt="" class="thumbnail" />
-            <a class="portfolio_work_name">Lista zadań do zrobienia</a>
-            <p class="portfolio_work_description">Python, csv</p>
+            <a href="" id="item-1">
+              <video
+                src="item1\file_example_WEBM_480_900KB.webm"
+                class="portfolio_thumbnail"
+                autoplay="true"
+                loop="true"
+              ></video>
+              <span> Lista zadań do zrobienia</span>
+            </a>
+            <div class="portfolio_work_description">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                elementum et quam quis vehicula.
+              </p>
+              <p><span>Python</span> <span>csv</span></p>
+            </div>
+          </div>
+          <div class="portfolio_work">
+            <a href="" id="item-1">
+              <video
+                src="item1\file_example_WEBM_480_900KB.webm"
+                class="portfolio_thumbnail"
+                autoplay="true"
+                loop="true"
+              ></video>
+              <span> Lista zadań do zrobienia</span>
+            </a>
+            <div class="portfolio_work_description">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                elementum et quam quis vehicula.
+              </p>
+              <p><span>Python</span> <span>csv</span></p>
+            </div>
           </div>
         </div>
         <div class="see_more background">
