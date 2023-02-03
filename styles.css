@@ -8,6 +8,7 @@
   --accent_three: #ffe5e3;
   --accent_four: #ffcc57;
   --gray: #858585;
+  --mix-blend-mode: lighten;
 }
 
 * {
@@ -91,7 +92,7 @@ p {
 }
 
 .colored {
-  mix-blend-mode: lighten;
+  mix-blend-mode: var(--mix-blend-mode);
   background-color: var(--white);
 }
 
@@ -169,6 +170,14 @@ p {
   max-width: 200px;
 }
 
+.navbar_open {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-grow: 0.75;
+}
+
 .button_group_nav {
   display: flex;
   flex-direction: column;
@@ -178,6 +187,7 @@ p {
 
 .languages_group_nav {
   margin-bottom: 28px;
+  visibility: hidden;
 }
 
 .name_nav {
@@ -199,12 +209,17 @@ p {
   margin-bottom: 28px;
 }
 
-.link_nav.radio {
-  margin-right: 10px;
+.link_nav.mail {
+  display: none;
 }
 
-a.unselected {
+.link_nav.radio {
+  margin-right: 10px;
   font-weight: 500;
+}
+
+.link_nav.radio.selected {
+  font-weight: 800;
 }
 
 /* BODY */
@@ -382,7 +397,12 @@ a.unselected {
   max-width: 740px;
 }
 
-.portfolio_work_name {
+.portfolio_work a {
+  display: block;
+}
+
+.portfolio_work span {
+  display: inline-block;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
@@ -402,6 +422,9 @@ a.unselected {
 .portfolio_work_description span {
   border: 1px solid var(--black);
   padding: 3px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 500;
   border-radius: 0.75rem;
 }
 
@@ -644,7 +667,9 @@ section#contact {
     z-index: 200;
     position: fixed;
     width: 100vw;
-    background-color: transparent;
+    /* background-color: transparent; */
+    background: none;
+    height: auto;
   }
 
   #hamburger {
@@ -729,13 +754,16 @@ section#contact {
   }
 
   .navbar_contents {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
-    height: 100vh;
     margin: 0;
     float: none;
     /* padding-left: 100px; */
-    /* height: 90vh; */
+    height: auto;
+  }
+
+  .navbar_open {
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     /* align-items: stretch; */
@@ -743,6 +771,15 @@ section#contact {
     justify-content: space-between;
     background-color: var(--white_95);
     z-index: 200;
+    width: 100%;
+    height: 100vh;
+    transition: all 500ms ease;
+  }
+
+  .navbar_open.hidden {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
   }
 
   .navbar_top {
@@ -754,7 +791,7 @@ section#contact {
     justify-content: space-between;
     width: 100%;
     max-width: 100%;
-    background-color: #000814;
+    background-color: var(--black);
   }
 
   .navbar_top a {
@@ -801,6 +838,9 @@ section#contact {
     line-height: 1.75rem;
     margin-bottom: 28px;
   }
+  .link_nav.mail {
+    display: inline-block;
+  }
   .link_nav.radio {
     margin-right: auto;
   }
@@ -810,9 +850,22 @@ section#contact {
   }
 
   .container {
-    width: 100vw;
+    width: 100%;
     margin-right: 0px;
-    margin-top: 60px;
+    float: none;
+  }
+
+  .wide {
+    max-width: 100%;
+  }
+  .colored,
+  .background {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .portfolio_work {
+    max-width: 100%;
   }
 }
 

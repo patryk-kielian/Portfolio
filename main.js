@@ -1,4 +1,3 @@
-function myInitCode() {}
 // cursor
 document.body.addEventListener("mousemove", (evt) => {
   const mouseX = evt.clientX;
@@ -19,9 +18,11 @@ document.body.addEventListener("mousemove", (evt) => {
 // hamburger icon
 window.addEventListener("load", function () {
   console.log("The load event has fired!");
-  var hamburger = document.querySelector("#hamburger");
+  const hamburger = document.querySelector("#hamburger");
+  const navbar = document.querySelector(".navbar_open");
   hamburger.addEventListener("click", function () {
     hamburger.classList.toggle("open");
+    navbar.classList.toggle("hidden");
   });
 });
 
@@ -56,4 +57,51 @@ document.querySelectorAll("a[href*='#']").forEach((link) => {
 
     requestAnimationFrame(animation);
   });
+});
+
+// Get the light and night mode buttons
+const lightButton = document.querySelector("#light");
+const nightButton = document.querySelector("#night");
+
+// Check if the mode is already set in local storage
+let selectedMode = localStorage.getItem("selectedMode");
+
+// If no mode is set, default to light
+if (!selectedMode) {
+  selectedMode = "light";
+  localStorage.setItem("selectedMode", selectedMode);
+}
+
+// Function to switch between light and night modes
+const switchMode = (mode) => {
+  localStorage.setItem("selectedMode", mode);
+  if (mode === "light") {
+    document.documentElement.style.setProperty("--black", "#000814");
+    document.documentElement.style.setProperty("--white", "#ffffff");
+    document.documentElement.style.setProperty("--black_95", "#000814f2");
+    document.documentElement.style.setProperty("--white_95", "#fffffff2");
+    document.documentElement.style.setProperty("--mix-blend-mode", "lighten");
+    lightButton.classList.add("selected");
+    nightButton.classList.remove("selected");
+  } else {
+    document.documentElement.style.setProperty("--black", "#ffffff");
+    document.documentElement.style.setProperty("--white", "#000814");
+    document.documentElement.style.setProperty("--black_95", "#fffffff2");
+    document.documentElement.style.setProperty("--white_95", "#000814f2");
+    document.documentElement.style.setProperty("--mix-blend-mode", "darken");
+    lightButton.classList.remove("selected");
+    nightButton.classList.add("selected");
+  }
+};
+
+// Set the initial state of the buttons and root styles based on the selected mode
+switchMode(selectedMode);
+
+// Add event listeners to the buttons to change the selected mode
+lightButton.addEventListener("click", () => {
+  switchMode("light");
+});
+
+nightButton.addEventListener("click", () => {
+  switchMode("night");
 });
