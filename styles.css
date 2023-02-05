@@ -632,10 +632,13 @@ section#contact {
   .portfolio_work {
     padding-bottom: 50px;
   }
-  .portfolio_work_name {
-    margin: 10px 0;
+  .portfolio_work span {
+    margin: 10px 0 20px;
     font-size: 2.5rem;
     line-height: 100%;
+  }
+  .portfolio_work_description span {
+    font-size: 1.5rem;
   }
 
   .see_more_flex {
@@ -654,7 +657,7 @@ section#contact {
   }
   .contact_item {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .copyright {
@@ -663,6 +666,10 @@ section#contact {
 }
 
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+
   .navbar {
     z-index: 200;
     position: fixed;
@@ -822,8 +829,8 @@ section#contact {
   }
 
   .name_nav {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     color: var(--white);
     margin-bottom: 0;
   }
@@ -834,9 +841,9 @@ section#contact {
     font-family: Montserrat, sans-serif;
     font-weight: 800;
     color: var(--black);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     line-height: 1.75rem;
-    margin-bottom: 28px;
+    margin-bottom: 50px;
   }
   .link_nav.mail {
     display: inline-block;
@@ -867,19 +874,96 @@ section#contact {
   .portfolio_work {
     max-width: 100%;
   }
+
+  section#contact {
+    min-height: unset;
+  }
 }
 
 @media screen and (max-width: 480px) {
-}
+  html {
+    font-size: 80%;
+  }
 
+  .container {
+    overflow: hidden;
+  }
+
+  .name {
+    font-weight: 800;
+    font-size: min(156px, 20vw, 25vh);
+    line-height: 115%;
+    margin-top: auto;
+  }
+
+  .title {
+    font-size: min(3.5rem, 12vw);
+  }
+
+  .tool_img {
+    width: 32px;
+    height: 32px;
+    margin: 50px auto 15px;
+  }
+  .tool_name {
+    font-size: 1rem;
+  }
+
+  .language {
+    font-size: min(1.25rem, 4vw);
+  }
+
+  .portfolio_work span {
+    margin: 10px 0;
+    font-size: 2rem;
+    line-height: 100%;
+  }
+
+  .portfolio_work_description p {
+    margin: 10px 0 0;
+  }
+
+  .portfolio_work_description span {
+    font-size: 1.25rem;
+  }
+
+  .profile_img {
+    height: 32px;
+    width: 32px;
+  }
+  .profile_paragraph {
+    font-size: 1.25rem;
+  }
+
+  .contact_flex {
+    padding: 70px 0 200px;
+  }
+  .contact_link {
+    font-size: 1.25rem;
+  }
+}
 @media screen and (max-height: 600px) {
   .button_group_nav.shortcuts {
     display: none;
   }
 
+  .button_group_nav {
+    margin-bottom: 0;
+  }
+
+  .scroll_down {
+    visibility: hidden;
+  }
+  .name_landing {
+    padding-top: 60px;
+  }
   .subtext {
     font-size: 1.375rem;
     line-height: 2rem;
+  }
+
+  .contact_flex {
+    padding: 70px 0 80px;
   }
 }
 
