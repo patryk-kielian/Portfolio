@@ -17,7 +17,6 @@ document.body.addEventListener("mousemove", (evt) => {
 
 // hamburger icon
 window.addEventListener("load", function () {
-  console.log("The load event has fired!");
   const hamburger = document.querySelector("#hamburger");
   const navbar = document.querySelector(".navbar_open");
   hamburger.addEventListener("click", function () {
@@ -104,4 +103,37 @@ lightButton.addEventListener("click", () => {
 
 nightButton.addEventListener("click", () => {
   switchMode("night");
+});
+
+// Video full-screen toggle
+const video = document.querySelector("video.project");
+const popup = document.querySelector(".project_popup");
+video.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (
+    video.classList.contains("full") &&
+    !event.target.closest(".video-controls")
+  ) {
+    video.classList.remove("full");
+    video.removeAttribute("controls");
+  } else {
+    video.classList.add("full");
+    video.setAttribute("controls", "");
+    setTimeout(() => {
+      popup.classList.remove("hidden");
+      setTimeout(() => {
+        popup.classList.add("hidden");
+      }, 2000);
+    }, 500);
+    // setTimeout(() => {
+    //   video.classList.add("fixed");
+    // }, 500);
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && video.classList.contains("full")) {
+    video.classList.remove("full");
+    video.removeAttribute("controls");
+  }
 });
