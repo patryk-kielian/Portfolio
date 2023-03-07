@@ -1,3 +1,5 @@
+document.querySelector("#copyright-year").innerText = new Date().getFullYear();
+
 // cursor
 document.body.addEventListener("mousemove", (evt) => {
   const mouseX = evt.clientX;

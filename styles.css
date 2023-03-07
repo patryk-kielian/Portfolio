@@ -346,6 +346,10 @@ p {
   -webkit-mask-image: url(./img/logo_js.svg);
   mask-image: url(./img/logo_js.svg);
 }
+.react_img {
+  -webkit-mask-image: url(./img/logo_react.svg);
+  mask-image: url(./img/logo_react.svg);
+}
 .python_img {
   -webkit-mask-image: url(./img/logo_python.svg);
   mask-image: url(./img/logo_python.svg);
