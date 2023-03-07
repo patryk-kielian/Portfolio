@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Patryk Kielian</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;800&family=Montserrat:wght@500;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <!-- <div class="cursor"></div> -->
+    <div class="navbar">
+      <div class="navbar_contents">
+        <div class="navbar_top">
+          <a href="../index.html" class="name_nav">Patryk Kielian</a>
+          <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="navbar_open hidden">
+          <div class="button_group_nav shortcuts">
+            <a href="#description" class="link_nav">opis</a>
+            <a href="#demo" class="link_nav">demo</a>
+          </div>
+          <div class="button_group_nav">
+            <a href="mailto: patryk.kielian0@gmail.com" class="link_nav"
+              >e-mail</a
+            >
+            <a
+              href="https://drive.google.com/uc?export=download&id=16EI69IT6yu_tRiruqPWv5DkVXbaGNxJ7"
+              class="link_nav"
+              >pobierz cv</a
+            >
+            <a href="" class="link_nav">linkedin</a>
+          </div>
+          <div class="controls">
+            <div class="languages_group_nav project">
+              <a href="" class="link_nav radio">PL</a>
+              <a href="" class="link_nav radio">EN</a>
+            </div>
+            <div class="color_mode_group_nav">
+              <a href="" class="link_nav radio" id="light">light</a>
+              <a href="" class="link_nav radio" id="night">night</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container">
+      <section id="description">
+        <div class="name_landing colored project">
+          <h1 class="name project">Forkify</h1>
+        </div>
+        <div class="subtext_landing background">
+          <a
+            href="https://github.com/patryk-kielian/Forkify"
+            class="profile_link project"
+            >github repository</a
+          >
+          <p class="about_paragraph wide project">
+            Strona internetowa do wyszukiwania oraz udostępniania przepisów
+            kulinarnych. Napisana w ramach kursu
+            <i>The Complete JavaScript Course 2023: From Zero to Expert!</i>
+            Użytkownicy mogą wyszukiwać przepisy z listy haseł, zapisywać je w
+            zakładkach, zmieniać ilość porcji, która wpływa na ilość składników.
+            Ponadto możliwe jest dodawanie nowych przepisów, poprzez wypełnienie
+            formularza.
+          </p>
+          <a
+            href="https://patryk-kielian.github.io/Forkify"
+            class="profile_link project"
+            >link do strony</a
+          >
+          <h3 class="project">Użyte narzędzia:</h3>
+          <p class="portfolio_work_description project">
+            <span>Javascript</span> <span>MVC</span> <span>Parcel</span>
+          </p>
+        </div>
+
+        <a href="#demo" class="scroll_down project"><span></span></a>
+      </section>
+      <section id="demo">
+        <div class="background">
+          <p class="project_prompt">
+            naciśnij, aby wyświetlić w trybie pełnoekranowym
+          </p>
+          <video
+            src="demo.webm"
+            class="wide project"
+            playsinline
+            autoplay
+            muted
+            loop
+          ></video>
+          <p class="project_popup hidden">
+            Aby zamknąć pełny ekran, kliknij w dowolnym miejscu na ekranie, lub
+            naciśnij Esc
+          </p>
+          <p class="copyright background project">
+            Patryk Kielian © <span id="copyright-year">2023 </span> wszelkie
+            prawa zastrzeżone
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+      integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../main.js" defer></script>
+  </body>
+</html>
