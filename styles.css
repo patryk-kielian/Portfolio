@@ -370,9 +370,9 @@ p {
   -webkit-mask-image: url(./img/logo_ps.svg);
   mask-image: url(./img/logo_ps.svg);
 }
-.issuu_img {
-  -webkit-mask-image: url(./img/logo_issuu.svg);
-  mask-image: url(./img/logo_issuu.svg);
+.gdrive_img {
+  -webkit-mask-image: url(./img/logo_gdrive.svg);
+  mask-image: url(./img/logo_gdrive.svg);
 }
 
 .languages_flex {
@@ -430,6 +430,7 @@ p {
   line-height: 1.75rem;
   font-weight: 500;
   border-radius: 0.75rem;
+  margin: 10px 0;
 }
 
 /*
@@ -489,14 +490,14 @@ p {
   font-size: min(3vw, 1.5rem);
   line-height: 140%;
 }
-*/
 
 .see_more {
 }
 
 .see_more_subtitle {
-  /* padding-left: 3%; */
 }
+
+*/
 
 .see_more_flex {
   display: flex;
@@ -631,7 +632,10 @@ h3.project {
   position: relative;
 }
 .portfolio_work_description.project {
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  max-width: min(62vw, 925px);
 }
 
 .project_prompt {
